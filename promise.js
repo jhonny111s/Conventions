@@ -9,3 +9,9 @@ function suma(a, b) {
         }, 1000);
     })
 }
+
+suma('a', 2).then((result) => {
+    console.log(result);
+}).catch((err) => {
+    console.log(err);
+})
