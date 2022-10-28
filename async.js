@@ -10,8 +10,11 @@ function suma(a, b) {
     })
 }
 
-suma('a', 2).then((result) => {
+async function asyncCall() {
+    console.log('calling');
+    const result = await suma('1', 2);
     console.log(result);
-}).catch((err) => {
-    console.log(err);
-})
+    // expected output: "resolved"
+}
+
+asyncCall();
